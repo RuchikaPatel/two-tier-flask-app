@@ -98,9 +98,9 @@ docker run -d \
     --name mysql \
     -v mysql-data:/var/lib/mysql \
     --network=twotier \
-    -e MYSQL_DATABASE=mydb \
+    -e MYSQL_DATABASE=KYC \
     -e MYSQL_USER=root \
-    -e MYSQL_ROOT_PASSWORD=admin \
+    -e MYSQL_ROOT_PASSWORD=test@123 \
     -p 3306:3306 \
     mysql:5.7
 
@@ -112,8 +112,8 @@ docker run -d \
     --network=twotier \
     -e MYSQL_HOST=mysql \
     -e MYSQL_USER=root \
-    -e MYSQL_PASSWORD=admin \
-    -e MYSQL_DB=mydb \
+    -e MYSQL_PASSWORD=test@123 \
+    -e MYSQL_DB=KYC \
     -p 5000:5000 \
     flaskapp:latest
 
